@@ -6,6 +6,9 @@ import Navbar from './Navbar'
 import Main from './Main'
 import './App.css'
 
+
+var gasEstimate = web3.eth.estimateGas({data: bytecode});
+
 class App extends Component {
 
   async componentWillMount() {
