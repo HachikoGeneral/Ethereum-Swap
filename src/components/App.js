@@ -6,9 +6,6 @@ import Navbar from './Navbar'
 import Main from './Main'
 import './App.css'
 
-
-
-
 class App extends Component {
 
   async componentWillMount() {
@@ -18,7 +15,7 @@ class App extends Component {
 
   async loadBlockchainData() {
     const web3 = window.web3
-    
+
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
 
@@ -30,9 +27,6 @@ class App extends Component {
     const tokenData = Token.networks[networkId]
     if(tokenData) {
       const token = new web3.eth.Contract(Token.abi, tokenData.address)
-
-
-
       this.setState({ token })
       let tokenBalance = await token.methods.balanceOf(this.state.account).call()
       this.setState({ tokenBalance: tokenBalance.toString() })
@@ -47,7 +41,7 @@ class App extends Component {
       const etherSwap = new web3.eth.Contract(EtherSwap.abi, etherSwapData.address)
       this.setState({ etherSwap })
     } else {
-      window.alert('ChikoSwap contract not deployed to detected network.')
+      window.alert('EtherSwap contract not deployed to detected network.')
     }
 
    this.setState({ loading: false })
@@ -68,7 +62,7 @@ class App extends Component {
 
   buyTokens = (etherAmount) => {
     this.setState({ loading: true })
-    this.state.etherSwap.methods.buyTokens().send({ value: ether Amount, gas: 1000000, from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.etherSwap.methods.buyTokens().send({ value: etherAmount, from: this.state.account }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
   }
@@ -76,7 +70,7 @@ class App extends Component {
   sellTokens = (tokenAmount) => {
     this.setState({ loading: true })
     this.state.token.methods.approve(this.state.etherSwap.address, tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
-      this.state.etherSwap.methods.sellTokens(tokenAmount).send({ gas: 1000000, from: this.state.account }).on('transactionHash', (hash) => {
+      this.state.etherSwap.methods.sellTokens(tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({ loading: false })
       })
     })
