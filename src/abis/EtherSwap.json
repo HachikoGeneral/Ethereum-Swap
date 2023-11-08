@@ -22,8 +22,8 @@
           "name": "account",
           "type": "address"
         },
-         {
-          "indexed": false,
+        {
+"indexed": false,
           "internalType": "address",
           "name": "token",
           "type": "address"
@@ -44,7 +44,7 @@
       "name": "TokensPurchased",
       "type": "event"
     },
-    {
+{
       "anonymous": false,
       "inputs": [
         {
@@ -66,7 +66,7 @@
           "type": "uint256"
         },
         {
-          "indexed": false,
+"indexed": false,
           "internalType": "uint256",
           "name": "rate",
           "type": "uint256"
@@ -90,7 +90,7 @@
       "stateMutability": "view",
       "type": "function"
     },
-    {
+{
       "constant": true,
       "inputs": [],
       "name": "rate",
@@ -110,9 +110,9 @@
       "inputs": [],
       "name": "token",
       "outputs": [
-        {
+    {
           "internalType": "contract Token",
-            "name": "",
+          "name": "",
           "type": "address"
         }
       ],
@@ -136,16 +136,17 @@
           "internalType": "uint256",
           "name": "_amount",
           "type": "uint256"
-        }
+}
       ],
-       "name": "sellTokens",
+      "name": "sellTokens",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-    "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\>  "bytecode": "0x60806040526040518060400160405280601a81526020017f45746865725377617020496e7374616e742045786368616e676500>  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd3>  "sourceMap": "996:1326:0:-;;;1020:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1114:1;1097:18;;1361:64;8:9:-1;5:2;;;30:>  "deployedSourceMap": "996:1326:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;10>  "source": "pragma solidity ^0.5.0;\n\nimport \"./Token.sol\";\n                                                      >  "sourcePath": "/root/Ethereum-Swap/src/contracts/EtherSwap.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\>  "bytecode": "0x60806040526040518060400160405280601a81526020017f45746865725377617020496e7374616e742045786368616e676500>  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd3>  "sourceMap": "996:1326:0:-;;;1020:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1114:1;1097:18;;1361:64;8:9:-1;5:2;;;30:>  "deployedSourceMap": "996:1326:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;10>  "source": "pragma solidity ^0.5.0;\n\nimport \"./Token.sol\";\n                                                      >  "sourcePath": "/root/Ethereum-Swap/src/contracts/EtherSwap.sol",
+  "ast": {
     "absolutePath": "project:/src/contracts/EtherSwap.sol",
     "exportedSymbols": {
       "EtherSwap": [
@@ -155,8 +156,8 @@
     "id": 142,
     "nodeType": "SourceUnit",
     "nodes": [
-      {
-      "id": 1,
+{
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -177,7 +178,7 @@
         "symbolAliases": [],
         "unitAlias": ""
       },
-       {
+ {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
@@ -197,7 +198,7 @@
             "nodeType": "VariableDeclaration",
             "scope": 141,
             "src": "1020:47:0",
-            "stateVariable": true,
+"stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
               "typeIdentifier": "t_string_storage",
@@ -222,7 +223,7 @@
               "isPure": true,
               "kind": "string",
               "lValueRequested": false,
-              "nodeType": "Literal",
+ "nodeType": "Literal",
               "src": "1039:28:0",
               "subdenomination": null,
               "typeDescriptions": {
@@ -246,7 +247,7 @@
               "typeIdentifier": "t_contract$_Token_$379",
               "typeString": "contract Token"
             },
-            "typeName": {
+"typeName": {
               "contractScope": null,
               "id": 6,
               "name": "Token",
@@ -255,7 +256,7 @@
               "src": "1073:5:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_Token_$379",
-                 "typeString": "contract Token"
+                "typeString": "contract Token"
               }
             },
             "value": null,
@@ -271,10 +272,10 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_uint256",
+"typeIdentifier": "t_uint256",
               "typeString": "uint256"
             },
-           "typeName": {
+            "typeName": {
               "id": 8,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
@@ -296,11 +297,11 @@
               "nodeType": "Literal",
               "src": "1114:1:0",
               "subdenomination": null,
-              "typeDescriptions": {
+"typeDescriptions": {
                 "typeIdentifier": "t_rational_1_by_1",
                 "typeString": "int_const 1"
               },
-               "value": "1"
+              "value": "1"
             },
             "visibility": "public"
           },
@@ -321,12 +322,12 @@
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "scope": 20,
-                  "src": "1153:15:0",
+"src": "1153:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
-                     "typeString": "address"
+                    "typeString": "address"
                   },
                   "typeName": {
                     "id": 11,
@@ -342,8 +343,8 @@
                   "value": null,
                   "visibility": "internal"
                 },
-                 {
-                  "constant": false,
+                {
+"constant": false,
                   "id": 14,
                   "indexed": false,
                   "name": "token",
@@ -367,7 +368,7 @@
                       "typeString": "address"
                     }
                   },
-                    "value": null,
+"value": null,
                   "visibility": "internal"
                 },
                 {
@@ -384,7 +385,7 @@
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   },
-                  "typeName": {
+"typeName": {
                     "id": 15,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
@@ -393,7 +394,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
-                    },
+                  },
                   "value": null,
                   "visibility": "internal"
                 },
@@ -410,8 +411,8 @@
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
-                  },
-                   "typeName": {
+},
+                  "typeName": {
                     "id": 17,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
@@ -429,7 +430,7 @@
             },
             "src": "1122:116:0"
           },
-           {
+{
             "anonymous": false,
             "documentation": null,
             "id": 30,
@@ -453,7 +454,7 @@
                     "typeIdentifier": "t_address",
                     "typeString": "address"
                   },
-                  "typeName": {
+"typeName": {
                     "id": 21,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
@@ -467,7 +468,7 @@
                   "value": null,
                   "visibility": "internal"
                 },
-                {
+{
                   "constant": false,
                   "id": 24,
                   "indexed": false,
@@ -492,7 +493,7 @@
                       "typeString": "address"
                     }
                   },
-                  "value": null,
+"value": null,
                   "visibility": "internal"
                 },
                 {
@@ -518,7 +519,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
-                     },
+},
                   "value": null,
                   "visibility": "internal"
                 },
@@ -544,7 +545,7 @@
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
-                       }
+}
                   },
                   "value": null,
                   "visibility": "internal"
@@ -569,8 +570,8 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "argumentTypes": null,
-                       "id": 35,
+"argumentTypes": null,
+                      "id": 35,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -594,13 +595,7 @@
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_Token_$379",
                         "typeString": "contract Token"
-                      }
-                    },
-                    "src": "1404:14:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Token_$379",
-                      "typeString": "contract Token"
-                    }
+}
                   },
                   "id": 38,
                   "nodeType": "ExpressionStatement",
@@ -620,12 +615,12 @@
               "nodeType": "ParameterList",
               "parameters": [
                 {
-                "constant": false,
+                  "constant": false,
                   "id": 32,
                   "name": "_token",
                   "nodeType": "VariableDeclaration",
                   "scope": 40,
-                  "src": "1373:12:0",
+"src": "1373:12:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -644,13 +639,13 @@
                       "typeString": "contract Token"
                     }
                   },
-                   "value": null,
+                  "value": null,
                   "visibility": "internal"
                 }
               ],
               "src": "1372:14:0"
             },
-            "returnParameters": {
+"returnParameters": {
               "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
@@ -669,14 +664,14 @@
               "src": "1467:363:0",
               "statements": [
                 {
-                "assignments": [
+                  "assignments": [
                     44
                   ],
                   "declarations": [
                     {
                       "constant": false,
                       "id": 44,
-                      "name": "tokenAmount",
+"name": "tokenAmount",
                       "nodeType": "VariableDeclaration",
                       "scope": 79,
                       "src": "1526:16:0",
@@ -695,12 +690,12 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
-                         },
+                      },
                       "value": null,
                       "visibility": "internal"
                     }
                   ],
-                  "id": 49,
+"id": 49,
                   "initialValue": {
                     "argumentTypes": null,
                     "commonType": {
@@ -725,7 +720,7 @@
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
-                        }
+}
                       },
                       "id": 46,
                       "isConstant": false,
@@ -741,7 +736,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "nodeType": "BinaryOperation",
+"nodeType": "BinaryOperation",
                     "operator": "*",
                     "rightExpression": {
                       "argumentTypes": null,
@@ -766,7 +761,7 @@
                   "src": "1526:35:0"
                 },
                 {
-                  "expression": {
+"expression": {
                     "argumentTypes": null,
                     "arguments": [
                       {
