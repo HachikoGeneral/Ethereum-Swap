@@ -21,8 +21,7 @@ class App extends Component {
 
     const etherBalance = await web3.eth.getBalance(this.state.account)
     this.setState({ etherBalance })
-
-    // Load Token
+     // Load Token
     const networkId =  await web3.eth.net.getId()
     const tokenData = Token.networks[networkId]
     if(tokenData) {
@@ -41,12 +40,11 @@ class App extends Component {
       const etherSwap = new web3.eth.Contract(EtherSwap.abi, etherSwapData.address)
       this.setState({ etherSwap })
     } else {
-      window.alert('Chikoverse Hub contract not deployed to detected network.')
+      window.alert('EtherSwap contract not deployed to detected network.')
     }
 
    this.setState({ loading: false })
   }
-
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -62,33 +60,49 @@ class App extends Component {
 
   buyTokens = (etherAmount) => {
     this.setState({ loading: true })
-    this.state.etherSwap.methods.buyTokens().send({ value: etherAmount, from: this.state.account }).on('transactionHash', (hash) => {
-      this.setState({ loading: false })
+    this.state.etherSwap.methods.buyTokens().send({ value: etherAmount, from: this.state.account }).on('transactionHash>      this.setState({ loading: false })
     })
   }
+
+  sellTokens = async (tokenAmount) => {
+    try {
+      this.setState({ loading: true });
+      await this.state.token.methods
+       .approve(this.state.etherSwap._address, tokenAmount)
+        .send({ from: this.state.account });
+
+      await this.state.etherSwap.methods
+        .sellTokens(tokenAmount)
+        .send({ from: this.state.account });
+      this.setState({ loading: false });
+    } catch (error) {
+      this.setState({ loading: false });
+      console.error(error);
+    }
+  };
 
   constructor(props) {
     super(props)
     this.state = {
       account: '',
       token: {},
-      etherSwap: {}, 
+      etherSwap: {},
       etherBalance: '0',
       tokenBalance: '0',
       loading: true
     }
   }
-
   render() {
     let content
 
     if(this.state.loading) {
      content = <p id="loader" className="text-center">Loading...</p>
     } else {
-      content = <Main 
+      content = <Main
         etherBalance={this.state.etherBalance}
         tokenBalance={this.state.tokenBalance}
         buyTokens={this.buyTokens}
+        sellTokens={this.sellTokens}
       />
     }
 
@@ -103,10 +117,10 @@ class App extends Component {
                   href="https://github.com/yuvan11"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
+ >
                 </a>
            {content}
-    
+
               </div>
             </main>
           </div>
