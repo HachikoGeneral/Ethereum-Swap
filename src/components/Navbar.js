@@ -4,8 +4,8 @@ import Identicon from 'identicon.js'
 
 class Navbar extends Component {
 
-  
- 
+
+
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ class Navbar extends Component {
                         target="_blank"
 rel="noopener noreferrer"
           >
-            Chikoverse Hub
+            ChikoSwap
           </a>
 
           <ul className="navbar-nav px-3">
@@ -24,8 +24,7 @@ rel="noopener noreferrer"
             <small className="text-secondary">
               <small id="account">{this.props.account}</small>
             </small>
-
-            { this.props.account
+ { this.props.account
               ? <img
                 className="ml-2"
                 width='30'
