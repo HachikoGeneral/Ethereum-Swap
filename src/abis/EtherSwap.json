@@ -145,8 +145,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\>  "bytecode": "0x60806040526040518060400160405280601a81526020017f45746865725377617020496e7374616e742045786368616e676500>  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd3>  "sourceMap": "996:1326:0:-;;;1020:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1114:1;1097:18;;1361:64;8:9:-1;5:2;;;30:>  "deployedSourceMap": "996:1326:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;10>  "source": "pragma solidity ^0.5.0;\n\nimport \"./Token.sol\";\n                                                      >  "sourcePath": "/root/Ethereum-Swap/src/contracts/EtherSwap.sol",
-  "ast": {
+    "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\>  "bytecode": "0x60806040526040518060400160405280601a81526020017f45746865725377617020496e7374616e742045786368616e676500>  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806306fdde031461004f5780632c4e722e146100df5780636c11bcd3>  "sourceMap": "996:1326:0:-;;;1020:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1114:1;1097:18;;1361:64;8:9:-1;5:2;;;30:>  "deployedSourceMap": "996:1326:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;10>  "source": "pragma solidity ^0.5.0;\n\nimport \"./Token.sol\";\n                                                      >  "sourcePath": "/root/Ethereum-Swap/src/contracts/EtherSwap.sol",
     "absolutePath": "project:/src/contracts/EtherSwap.sol",
     "exportedSymbols": {
       "EtherSwap": [
