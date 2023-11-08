@@ -1,11 +1,10 @@
 pragma solidity ^0.5.0;
 
 import "./Token.sol";
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-contract EtherSwap{
+                                                                                                                       >contract EtherSwap{
     string public name="EtherSwap Instant Exchange";
     Token public token;
-    uint public rate=100/100;
+    uint public rate=1;
 
     event TokensPurchased(
         address account,
@@ -20,8 +19,7 @@ contract EtherSwap{
         uint amount,
         uint rate
     );
-
-    constructor(Token _token) public {
+ constructor(Token _token) public {
         token = _token;
     }
 
@@ -46,7 +44,6 @@ require(token.balanceOf(msg.sender) >= _amount);
 //calculate the amount of ether to redeem
 
 uint etherAmount = _amount/rate;
-
 //Require that EtherSwap has enough Ether
 
 require(address(this).balance >= etherAmount);
