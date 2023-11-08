@@ -12,9 +12,8 @@ this.state ={
 }
 }
 
-  
+
   render() {
-   
     return (
         <form className="mb-3" onSubmit={(event) => {
             event.preventDefault()
@@ -30,16 +29,15 @@ this.state ={
           </span>
         </div>
         <div className="input-group mb-4">
-          <input 
+          <input
           onChange={(event) => {
-      
-            //console.log('changing')   
+
+            //console.log('changing')
             const etherAmount = this.input.value.toString()
             this.setState({
               output : etherAmount*1
             })
-          
-                  }}
+            }}
             ref={(input) =>  {this.input = input}}
             type="text"
             className="form-control form-control-lg"
@@ -55,31 +53,31 @@ this.state ={
         <div>
           <label className="float-left"><b>Output</b></label>
           <span className="float-right text-muted">
-            Balance: {window.web3.utils.fromWei(this.props.tokenBalance,'Ether')} 
+            Balance: {window.web3.utils.fromWei(this.props.tokenBalance,'Ether')}
                </span>
         </div>
         <div className="input-group mb-2">
           <input
             type="text"
-            className="form-control form-control-lg"
+className="form-control form-control-lg"
             placeholder="0"
-          value= {this.state.output}   
+          value= {this.state.output}
             disabled
           />
           <div className="input-group-append">
             <div className="input-group-text">
               <img src={tokenLogo} height='32' alt=""/>
-              &nbsp; cLAND
+              &nbsp; WCHK
             </div>
           </div>
         </div>
         <div className="mb-5">
           <span className="float-left text-muted">Exchange Rate</span>
-          <span className="float-right text-muted">1 CHK = 1 cLAND</span>
+          <span className="float-right text-muted">1 CHK = 1 WCHK</span>
         </div>
         <button type="submit" className="btn btn-primary btn-block btn-lg">SWAP!</button>
       </form>
-      
+
     );
   }
 }
